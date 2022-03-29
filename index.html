@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Forkify // Search over 1,000,000 recipes</title>
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="./img/logo.png" alt="Logo" class="logo" />
+        <form class="search">
+          <input
+            type="text"
+            class="search_field"
+            placeholder="Search over 1,000,000 recipes...."
+          />
+          <button class="btn search_btn">
+            <svg class="search_icon">
+              <use href="img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Search</span>
+          </button>
+        </form>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <button class="nav-btn btn-add-recipe">
+                <svg>
+                  <use href="/img/icons.svg#icon-edit"></use>
+                </svg>
+                <span>Add Recipe</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button class="nav-btn btn-bookmark">
+                <svg>
+                  <use href="/img/icons.svg#icon-bookmark"></use>
+                </svg>
+                <span>Bookmarks</span>
+              </button>
+              <div class="bookmarks">
+                <ul class="bookmarks-list">
+                  <div class="message">
+                    <div>
+                      <svg><use href="img/icons.svg#icon-smile"></use></svg>
+                    </div>
+                    <p>
+                      No bookmarks yet. Find a nice recipe and bookmark it :);
+                    </p>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>
