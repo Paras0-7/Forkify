@@ -1,0 +1,26 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "This application helps to get recipes of thousands of dishes.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paras0-7/Forkify.git"
+  },
+  "author": "Paras Rawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paras0-7/Forkify/issues"
+  },
+  "homepage": "https://github.com/Paras0-7/Forkify#readme",
+  "devDependencies": {
+    "parcel": "^2.4.0"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
