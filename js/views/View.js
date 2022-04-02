@@ -2,6 +2,9 @@ import icons from "url:../../img/icons.svg";
 export default class View {
   _data;
   render(data) {
+    if (!data || (Array.isArray(data) && data.length === 0)) {
+      return this.renderError();
+    }
     this._data = data;
     const markup = this._generateMarkup();
     this.clear();
@@ -25,7 +28,7 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   };
 
-  renderError() {
+  renderError(message = this._errorMessage) {
     const markup = `
       <div class="error">
       <div>
@@ -33,7 +36,7 @@ export default class View {
           <use href="${icons}#icon-alert-triangle"></use>
         </svg>
       </div>
-      <p>${this._errorMessage}</p>
+      <p>${message}</p>
     </div>
       `;
     this.clear();

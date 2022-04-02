@@ -1,5 +1,6 @@
 import icons from "url:../../img/icons.svg";
 import { Fraction } from "fractional";
+// import { fracty } from "fracty";
 import View from "./View.js";
 
 class RecipeView extends View {
@@ -51,9 +52,7 @@ class RecipeView extends View {
     </div>
 
     <div class="recipe__user-generated">
-      <svg>
-        <use href="${icons}#icon-user"></use>
-      </svg>
+     
     </div>
     <button class="btn--round">
       <svg class="">
