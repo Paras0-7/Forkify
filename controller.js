@@ -4,6 +4,7 @@ import searchView from "./js/views/searchView.js";
 import resultsView from "./js/views/resultsView.js";
 import paginationView from "./js/views/paginationView.js";
 import bookmarksView from "./js/views/bookmarksView.js";
+import addRecipeView from "./js/views/addRecipeView.js";
 
 import "core-js/stable"; // for polyfilling everything else like Array.find() method
 import "regenerator-runtime/runtime"; //polyfilling async await
@@ -78,6 +79,10 @@ const controlAddBookmark = function () {
 const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
+
+const controlAddRecipe = function (newRecipe) {
+  console.log(newRecipe);
+};
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -85,6 +90,7 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 init();
 
