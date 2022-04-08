@@ -80,8 +80,23 @@ const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
-const controlAddRecipe = function (newRecipe) {
-  console.log(newRecipe);
+const controlAddRecipe = async function (newRecipe) {
+  try {
+    addRecipeView.renderSpinner();
+    await model.uploadRecipe(newRecipe);
+    recipeView.render(model.state.recipe);
+
+    bookmarksView.render(model.state.bookmarks);
+
+    // change id in URL
+    window.history.pushState(null, "", `#${model.state.recipe.id}`);
+    // close form window
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, 2000);
+  } catch (err) {
+    addRecipeView.renderError(err.message);
+  }
 };
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
