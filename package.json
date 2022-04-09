@@ -2,9 +2,10 @@
   "name": "forkify",
   "version": "1.0.0",
   "description": "This application helps to get recipes of thousands of dishes.",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
